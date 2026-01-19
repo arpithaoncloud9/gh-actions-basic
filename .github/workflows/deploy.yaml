@@ -2,13 +2,13 @@
 name: Echo Workflow
 
 # event that triggers the workflow
-on: [push]
+on: [workflow_dispatch]
 
 jobs:
   echo: # name of the job
     runs-on: ubuntu-latest # specify the runner environment
     steps:
-      - name: Echo Message
-        run: echo "Hello, GitHub Actions!"
-      - name: Echo Message
-        run: echo "Bye, GitHub Actions!"
+      - name: message # name of the step
+        run: |
+          echo "Hello, GitHub Actions!"
+          echo "Bye, GitHub Actions!"
